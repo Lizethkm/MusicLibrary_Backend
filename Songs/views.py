@@ -22,3 +22,11 @@ def songs_list(request):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+
+
+@api_view(['GET'])
+def song_detail(request, pk):
+    song = Song.objects.get(pk=pk)
+    return Response(pk)
