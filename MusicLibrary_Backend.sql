@@ -1,0 +1,1 @@
+CREATE DATABASE music_library_database
